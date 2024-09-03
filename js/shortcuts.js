@@ -6,8 +6,8 @@ export default [
       gmail: "https://mail.google.com/mail/u/0/#inbox",
       proton: "https://mail.proton.me/u/1/inbox",
       twitter: "https://twitter.com",
-      ig: "",
-      deepl: "",
+      ig: "https://",
+      deepl: "https://",
     },
   },
   {
@@ -17,8 +17,8 @@ export default [
       yt: "https://mail.google.com/mail/u/0/#inbox",
       twitch: "https://mail.proton.me/u/1/inbox",
       netflix: "https://twitter.com",
-      idlix: "",
-      braflix: "",
+      idlix: "https://",
+      braflix: "https://",
     },
   },
   {
@@ -26,10 +26,10 @@ export default [
     color: "cyan",
     items: {
       github: "https://github.com/bossearch",
-      gitlab: "",
-      "Dev.to": "https://dev.to",
+      gitlab: "https://",
+      "dev.to": "https://dev.to",
       docs: "https://devdocs.io/",
-      r/neovim: "",
+      r/neovim: "https://",
     },
   },
   {
@@ -39,8 +39,8 @@ export default [
       qmk: "https://mail.google.com/mail/u/0/#inbox",
       r/crkbd: "https://mail.proton.me/u/1/inbox",
       hyprland: "https://twitter.com",
-      r/unixporn: "",
-      r/obsidian: "",
+      r/unixporn: "https://",
+      r/obsidian: "https://",
     },
   },
   {
@@ -50,8 +50,8 @@ export default [
       hackernews: "https://mail.google.com/mail/u/0/#inbox",
       r/indonesia: "https://mail.proton.me/u/1/inbox",
       world: "https://twitter.com",
-      tech: "",
-      business: "",
+      tech: "https://",
+      business: "https://",
     },
   },
   {
@@ -62,7 +62,7 @@ export default [
       epic: "https://mail.proton.me/u/1/inbox",
       ea: "https://mail.proton.me/u/1/inbox",
       gg.deals: "https://twitter.com",
-      r/gaming: "",
+      r/gaming: "https://",
     },
   },
   {
@@ -70,10 +70,10 @@ export default [
     color: "green",
     items: {
       tokped: "https://github.com/bossearch",
-      shopee: "",
+      shopee: "https://",
       blibli: "https://dev.to",
       marketplace: "https://devdocs.io/",
-      alibaba: "",
+      alibaba: "https://",
     },
   },
   {
@@ -83,8 +83,8 @@ export default [
       tempmail: "https://mail.google.com/mail/u/0/#inbox",
       "1337x": "https://mail.proton.me/u/1/inbox",
       subtitles: "https://twitter.com",
-      "typing.io": "",
-      fmhy: "",
+      "typing.io": "https://",
+      fmhy: "https://",
     },
   },
 ];
