@@ -11,7 +11,7 @@ input.addEventListener("keydown", function (e) {
     const userInput = input.value.trim().split(" ");
     const command = userInput[0].toLowerCase();
     const options = userInput.slice(1);
-    render(`<span class="red">$&nbsp;</span>${input.value}`);
+    render(`<span class="red">$&nbsp;</span>❯{input.value}`);
     try {
       const commandDetails = commands.find((c) =>
         c.name.map((n) => n.toLowerCase()).includes(command)
@@ -39,11 +39,8 @@ input.addEventListener("keydown", function (e) {
 window.addEventListener("load", () => {
   executors.ls();
   executors.motd();
-  let filenames = ["1a1b26_2k.jpg"];
   let root = document.getElementsByTagName("html")[0];
-  root.style.backgroundImage = `url("./backgrounds/${
-    filenames[Math.floor(Math.random() * filenames.length)]
-  }")`;
-  root.style.backgroundSize = "cover";
-  root.style.backgroundPosition = "center";
+  root.style.backgroundColor = "#1a1b26"; // Set solid color background
+  root.style.backgroundImage = "none";    // Ensure no background image is applied
 });
+
