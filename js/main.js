@@ -11,30 +11,43 @@ input.addEventListener("keydown", function (e) {
     const userInput = input.value.trim().split(" ");
     const command = userInput[0].toLowerCase();
     const options = userInput.slice(1);
-    render(`<span class="red">$&nbsp;</span>❯{input.value}`);
+    
     try {
       const commandDetails = commands.find((c) =>
         c.name.map((n) => n.toLowerCase()).includes(command)
       );
+
       if (commandDetails) {
-        if (command === "help") commandDetails.execute(commands);
-        else commandDetails.execute(options);
+        // Render in purple if the command is found
+        render(`<span class="purple">❯&nbsp;</span>${input.value}`);
+        if (command === "help") {
+          commandDetails.execute(commands);
+        } else {
+          commandDetails.execute(options);
+        }
       } else {
         const shortcutDetails = shortcuts
           .flatMap((c) => Object.entries(c.items))
           .find(([i]) => i.toLowerCase().startsWith(command));
         if (shortcutDetails) {
-          console.log(shortcutDetails);
+          // Render in purple if the shortcut is found
+          render(`<span class="purple">❯&nbsp;</span>${input.value}`);
           render(`Redirecting to ${shortcutDetails[0]}...`);
           window.location.href = shortcutDetails[1];
-        } else error("yellow", command, "command not found");
+        } else {
+          // Render in red if the command or shortcut is not found
+          render(`<span class="red">❯&nbsp;</span>${input.value}`);
+          error("yellow", command, "command not found");
+        }
       }
     } catch (e) {
       error("red", "JS Error", e.message);
     }
+    
     input.value = "";
   }
 });
+
 
 window.addEventListener("load", () => {
   executors.ls();

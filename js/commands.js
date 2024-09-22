@@ -2,7 +2,7 @@ import executor from "./executors.js";
 
 export default [
   {
-    name: ["", "s"],
+    name: ["ddg", "s"],
     description: "Searches DuckDuckGo for the given query",
     execute: executor.search,
   },
